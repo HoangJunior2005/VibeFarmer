@@ -41,4 +41,4 @@ Key project features:
 
 ## Notes
 
-For sharing or continuing development, include `Assets/`, `Packages/`, and `ProjectSettings/` so Unity can restore the project configuration correctly. c
+For sharing or continuing development, include `Assets/`, `Packages/`, and `ProjectSettings/` so Unity can restore the project configuration correctly. 
