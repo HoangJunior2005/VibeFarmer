@@ -24,6 +24,14 @@ public class UIInventoryBar : MonoBehaviour
         selectedPos = selectedObject.GetComponent<RectTransform>();
         selectedPos.anchoredPosition = new Vector3(MIN_POS, 0, 0);
         actualPos = MIN_POS;
+
+        for (int i = 0; i < inventorySlot.Length; i++)
+            inventorySlot[i].slotIndex = i;
+    }
+
+    public void SetActiveSlot(int index)
+    {
+        activePosArray = index;
     }
 
     private void OnDisable()
