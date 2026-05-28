@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UIInventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class UIInventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     private Canvas parentCanvas;
 
@@ -14,6 +14,7 @@ public class UIInventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     [HideInInspector] public ItemDetails itemDetails;
     [HideInInspector] public int itemQuantity;
+    [HideInInspector] public int slotIndex;
 
     [SerializeField] private UIInventoryBar inventoryBar = null;
     [SerializeField] private GameObject inventoryTextBoxPrefab = null;
@@ -49,6 +50,15 @@ public class UIInventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnPointerExit(PointerEventData eventData)
     {
         DestroyInventoryTextBox();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt))
+        {
+            inventoryBar.SetActiveSlot(slotIndex);
+            DestroyInventoryTextBox();
+        }
     }
 
     
