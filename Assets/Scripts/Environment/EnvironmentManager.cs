@@ -76,36 +76,7 @@ public class EnvironmentManager : MonoBehaviour
         // Đã xoá bỏ hoàn toàn ruộng bậc thang theo yêu cầu của bạn!
     }
 
-    private void Update()
-    {
-        // Nhấn phím [P] trên bàn phím để dịch chuyển Hồ Cá đến ngay dưới con trỏ chuột của bạn!
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            RepositionPondToMouse();
-        }
-    }
 
-    private void RepositionPondToMouse()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit, 500f))
-        {
-            // 1. Tìm và huỷ bỏ GameObject hồ cá cũ [FishPond] nếu tồn tại
-            Transform oldPond = transform.Find("[FishPond]");
-            if (oldPond != null)
-            {
-                Destroy(oldPond.gameObject);
-            }
-
-            // 2. Thiết lập vị trí mới theo toạ độ chuột vừa nhấp trúng
-            pondPosition = hit.point;
-            
-            // 3. Tiến hành xây dựng hồ cá nổi mới tại đúng vị trí chuột
-            BuildFishPond(pondPosition, pondRadius, pondFishCount, pondLotusCount, pondSeed);
-            
-            Debug.Log($"[EnvironmentManager] Đã dời Hồ Cá thành công đến vị trí chuột: X={hit.point.x:F2}, Y={hit.point.y:F2}, Z={hit.point.z:F2}. Để LƯU VĨNH VIỄN: Hãy tắt Play mode, chọn GameObject 'Enviroment' trong Hierarchy, nhập toạ độ này vào trường 'Pond Position' của EnvironmentManager!");
-        }
-    }
 
     // ── Hồ cá ─────────────────────────────────────────────────────────────────
     private void BuildFishPond(Vector3 worldPos, float radius, int fish, int lotus, int s)
