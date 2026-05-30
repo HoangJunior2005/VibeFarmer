@@ -76,7 +76,7 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
     }
 
     /// <summary>
-    /// AÒade item al final del inventario
+    /// AÔøΩade item al final del inventario
     /// </summary>
     private void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode)
     {
@@ -103,7 +103,7 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
     }
 
     /// <summary>
-    /// AÒade item a pos position
+    /// AÔøΩade item a pos position
     /// </summary>
     private void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode, int position)
     {
@@ -157,19 +157,19 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         switch (itemType)
         {
             case ItemType.Hoeing_tool:
-                itemTypeDescription = "Hoe";
+                itemTypeDescription = "Cu·ªëc";
                 break;
             case ItemType.Chopping_tool:
-                itemTypeDescription = "Axe";
+                itemTypeDescription = "R√¨u";
                 break;
             case ItemType.Breaking_tool:
-                itemTypeDescription = "Pickaxe";
+                itemTypeDescription = "Cu·ªëc chim";
                 break;
             case ItemType.Reaping_tool:
-                itemTypeDescription = "Scythe";
+                itemTypeDescription = "Li·ªÅm";
                 break;
             case ItemType.Watering_tool:
-                itemTypeDescription = "Watering Can";
+                itemTypeDescription = "B√¨nh t∆∞·ªõi";
                 break;
             default:
                 itemTypeDescription = itemType.ToString();
@@ -196,10 +196,10 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
     }
 
     /// <summary>
-    /// AÒade item al inventario seleccionado
+    /// AÔøΩade item al inventario seleccionado
     /// </summary>
     /// <param name="inventoryLocation">tipo de inventario, 0 - Jugador, 1 - Cofre</param>
-    /// <param name="item"> Item a aÒadir al inventario seleccionado</param>
+    /// <param name="item"> Item a aÔøΩadir al inventario seleccionado</param>
     public void AddItem(InventoryLocation inventoryLocation, int itemCode)
     {
         //int itemCode = item.ItemCode;
@@ -282,9 +282,9 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
     }
 
     /// <summary>
-    /// AÒade cantidad de dinero indicada al monedero
+    /// AÔøΩade cantidad de dinero indicada al monedero
     /// </summary>
-    /// <param name="money">cantidad dinero a aÒadir (>0) </param>
+    /// <param name="money">cantidad dinero a aÔøΩadir (>0) </param>
     public void AddMoney(int money)
     {
         if (money > 0)
@@ -337,7 +337,7 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
     }
     
     /// <summary>
-    /// Fuerza la actualizacion del inventario pequeÒo del jugador
+    /// Fuerza la actualizacion del inventario pequeÔøΩo del jugador
     /// </summary>
     public void UpdateInventoryPlayer()
     {

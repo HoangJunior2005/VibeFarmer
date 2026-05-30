@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(find /c/Users/Admin/Desktop/VibeFarmer/Assets -type f \\\\\\(-name *.txt -o -name *.md -o -name *dialogue* -o -name *story* \\\\\\))",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}
