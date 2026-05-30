@@ -8,10 +8,7 @@ public class UIManager : SingletonMonobehaviour<UIManager>
 
     public QuitMenuManager QuitMenuManager;
     [SerializeField] private GameObject pauseInventoryObject = null;
-    [SerializeField] private PauseMenuInventoryManagement pauseMenuInventoryManagement = null;
-    [SerializeField] private GameObject moneyObject = null;
     [SerializeField] private GameObject inventoryObject = null;
-    [SerializeField] private GameObject clockObject = null;
 
 
     /// <summary>
